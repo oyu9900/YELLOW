@@ -59,7 +59,7 @@ app.post('/auth/register', async (req, res) => {
     const user = await prisma.user.create({
       data: {
         email,
-        password: hashed,
+        passwordHash: hashed,
       },
       select: { id: true, email: true, createdAt: true },
     })
@@ -85,7 +85,7 @@ app.post('/auth/login', async (req, res) => {
       return res.status(400).json({ error: 'Invalid credentials' })
     }
 
-    const valid = await bcrypt.compare(password!, user.password)
+    const valid = await bcrypt.compare(password!, user.passwordHash)
     if (!valid) {
       return res.status(400).json({ error: 'Invalid credentials' })
     }
