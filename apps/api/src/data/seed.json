@@ -1,0 +1,154 @@
+[
+  {
+    "id": "org_1",
+    "fullName": "Altan Med",
+    "title": "Healthcare provider",
+    "email": "info@altanmed.mn",
+    "phone": "+976-11-111111",
+    "department": "Healthcare",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.918, "lng": 106.917 }
+  },
+  {
+    "id": "org_2",
+    "fullName": "MongolTech",
+    "title": "IT Services",
+    "email": "contact@mongoltech.mn",
+    "phone": "+976-11-222222",
+    "department": "IT",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.915, "lng": 106.905 }
+  },
+  {
+    "id": "org_3",
+    "fullName": "Blue Logistics",
+    "title": "Logistics & Transport",
+    "email": "hello@bluelog.mn",
+    "phone": "+976-11-333333",
+    "department": "Logistics",
+    "city": "Darkhan",
+    "location": { "lat": 49.486, "lng": 105.922 }
+  },
+  {
+    "id": "org_4",
+    "fullName": "Green Energy",
+    "title": "Renewable energy",
+    "email": "support@green.mn",
+    "phone": "+976-11-444444",
+    "department": "Energy",
+    "city": "Erdenet",
+    "location": { "lat": 49.033, "lng": 104.044 }
+  },
+  {
+    "id": "org_5",
+    "fullName": "City Library",
+    "title": "Public library",
+    "email": "library@city.mn",
+    "phone": "+976-11-555555",
+    "department": "Public",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.915, "lng": 106.915 }
+  },
+
+  {
+    "id": "org_6",
+    "fullName": "Steppe Finance",
+    "title": "Financial Services",
+    "email": "finance@steppe.mn",
+    "phone": "+976-11-666666",
+    "department": "Finance",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.917, "lng": 106.920 }
+  },
+  {
+    "id": "org_7",
+    "fullName": "EduWorld",
+    "title": "Education Center",
+    "email": "info@eduworld.mn",
+    "phone": "+976-11-777777",
+    "department": "Education",
+    "city": "Darkhan",
+    "location": { "lat": 49.490, "lng": 105.930 }
+  },
+  {
+    "id": "org_8",
+    "fullName": "TravelGo",
+    "title": "Travel Agency",
+    "email": "contact@travelgo.mn",
+    "phone": "+976-11-888888",
+    "department": "Travel",
+    "city": "Erdenet",
+    "location": { "lat": 49.031, "lng": 104.050 }
+  },
+  {
+    "id": "org_9",
+    "fullName": "Eco Builders",
+    "title": "Construction",
+    "email": "hello@ecobuild.mn",
+    "phone": "+976-11-999999",
+    "department": "Construction",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.920, "lng": 106.910 }
+  },
+  {
+    "id": "org_10",
+    "fullName": "Sky Telecom",
+    "title": "Telecommunications",
+    "email": "support@skytele.mn",
+    "phone": "+976-11-101010",
+    "department": "Telecom",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.919, "lng": 106.913 }
+  },
+
+  {
+    "id": "org_11",
+    "fullName": "Happy Kids School",
+    "title": "Kindergarten",
+    "email": "contact@happykids.mn",
+    "phone": "+976-11-121212",
+    "department": "Education",
+    "city": "Darkhan",
+    "location": { "lat": 49.488, "lng": 105.928 }
+  },
+  {
+    "id": "org_12",
+    "fullName": "Orkhon Farm",
+    "title": "Food Supplier",
+    "email": "info@orkhonfarm.mn",
+    "phone": "+976-11-131313",
+    "department": "Food",
+    "city": "Erdenet",
+    "location": { "lat": 49.035, "lng": 104.046 }
+  },
+  {
+    "id": "org_13",
+    "fullName": "Mongol Motors",
+    "title": "Car Dealer",
+    "email": "sales@mongolmotors.mn",
+    "phone": "+976-11-141414",
+    "department": "Auto",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.916, "lng": 106.911 }
+  },
+  {
+    "id": "org_14",
+    "fullName": "Digital Lab",
+    "title": "Software Agency",
+    "email": "hello@digitallab.mn",
+    "phone": "+976-11-151515",
+    "department": "IT",
+    "city": "Ulaanbaatar",
+    "location": { "lat": 47.917, "lng": 106.904 }
+  },
+  {
+    "id": "org_15",
+    "fullName": "Art Space",
+    "title": "Creative Studio",
+    "email": "contact@artspace.mn",
+    "phone": "+976-11-161616",
+    "department": "Creative",
+    "city": "Darkhan",
+    "location": { "lat": 49.487, "lng": 105.925 }
+  }
+]

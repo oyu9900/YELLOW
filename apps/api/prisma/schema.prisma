@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model YellowBookEntry {
+  id         String  @id @default(cuid())
+  fullName   String
+  title      String
+  email      String  @unique
+  phone      String?
+  department String
+  city       String
+  lat        Float?
+  lng        Float?
+  avatarUrl  String?
+}
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/nx-config",
+  "npmScope": "yellow-book",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "typecheck"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "typecheck": {}
+  },
+  "projects": {
+    "api": "apps/api",
+    "web": "apps/web",
+    "contract": "libs/contract"
+  }
+}
+
+

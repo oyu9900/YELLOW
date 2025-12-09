@@ -1,0 +1,64 @@
+{
+  "libs/contract/src": {
+    "root": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "libs/contract/src/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  }
+}

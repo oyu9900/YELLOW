@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page-bg: radial-gradient(circle at 20% 20%, #3a60ff55, #1d043d 60%);
+  --page-bg-2: linear-gradient(135deg, #361b73, #1d0b33 60%);
+  --text-strong: #e2e8f0;
+  --text-dim: #cbd5e1;
+  --card-glass: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 30%, rgba(58, 123, 255, 0.45), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(255, 58, 193, 0.45), transparent 60%),
+              linear-gradient(135deg, #1a1e4a 0%, #31175f 50%, #12001b 100%);
+
+  color: var(--text);
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-6;
+}
+
+.card {
+  border-radius: 28px;
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+.muted {
+  color: var(--muted);
+}
+
+@layer components {
+  .btn-primary {
+  @apply inline-flex items-center justify-center rounded-2xl px-7 py-3 font-semibold text-white;
+  background: linear-gradient(135deg, #3b8dff, #275bff);
+  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.55);
+  transition: all 0.25s ease;
+  }
+
+  .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 45px rgba(37, 99, 235, 0.65);
+  }
+
+  .btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold;
+  border: 1px solid #ffffff33;
+  color: var(--text-strong); 
+  background: #ffffff08;
+  backdrop-filter: blur(10px);
+  }
+  .form-input {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30;
+    box-shadow: inset 0 1px 0 rgba(226, 232, 240, 0.6);
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full bg-[#eef2ff] px-3 py-1 text-sm font-medium text-[#3744a5];
+  }
+  .card-glass {
+  background: var(--card-glass);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 28px;
+  }
+}
+
+select.form-input {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #94a3b8 50%), linear-gradient(135deg, #94a3b8 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 13px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 42px;
+}

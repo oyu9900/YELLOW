@@ -1,0 +1,89 @@
+name: Docker ECR Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [web, api]
+
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+      ECR_REPOSITORY_WEB: ${{ secrets.ECR_REPOSITORY_WEB }}
+      ECR_REPOSITORY_API: ${{ secrets.ECR_REPOSITORY_API }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build Docker image
+        id: build-image
+        run: |
+          if [ "${{ matrix.service }}" = "web" ]; then
+            REPO_NAME="${{ env.ECR_REPOSITORY_WEB }}"
+          else
+            REPO_NAME="${{ env.ECR_REPOSITORY_API }}"
+          fi
+
+          IMAGE_URI="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${REPO_NAME}:${{ github.sha }}"
+
+          echo "IMAGE_URI=${IMAGE_URI}" >> $GITHUB_ENV
+
+          docker build             -t "${IMAGE_URI}"             -f "apps/${{ matrix.service }}/Dockerfile" .
+
+      - name: Push Docker image
+        run: |
+          docker push "${IMAGE_URI}"
+
+      - name: Run health check
+        run: |
+          set -e
+
+          if [ "${{ matrix.service }}" = "web" ]; then
+            PORT=3000
+          else
+            PORT=4000
+          fi
+
+          CONTAINER_NAME="yb-${{ matrix.service }}-${{ github.sha }}"
+
+          docker run -d --rm             -e NODE_ENV=production             -e DATABASE_URL="file:./prisma/dev.db"             -p "${PORT}:${PORT}"             --name "${CONTAINER_NAME}"             "${IMAGE_URI}"
+
+          echo "Waiting for service to start..."
+          sleep 15
+
+          if [ "${{ matrix.service }}" = "web" ]; then
+            curl -f "http://localhost:${PORT}/" > "health-check-${{ matrix.service }}.txt"
+          else
+            curl -f "http://localhost:${PORT}/" > "health-check-${{ matrix.service }}.txt"
+          fi
+
+          docker stop "${CONTAINER_NAME}"
+
+      - name: Upload health check report
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-check-${{ matrix.service }}
+          path: health-check-${{ matrix.service }}.txt
