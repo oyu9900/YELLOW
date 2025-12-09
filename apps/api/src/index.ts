@@ -72,20 +72,21 @@ app.post('/auth/register', async (req, res) => {
 })
 
 // LOGIN
+// LOGIN
 app.post('/auth/login', async (req, res) => {
   try {
-    const { email, password } = req.body as { email?: string; password?: string }
+    const { email, password } = req.body
 
     if (!email || !password) {
       return res.status(400).json({ error: 'Email and password required' })
     }
 
     const user = await prisma.user.findUnique({ where: { email } })
-    if (!user) {
+    if (!user || !user.passwordHash) {
       return res.status(400).json({ error: 'Invalid credentials' })
     }
 
-    const valid = await bcrypt.compare(password!, user.passwordHash)
+    const valid = await bcrypt.compare(password, user.passwordHash)
     if (!valid) {
       return res.status(400).json({ error: 'Invalid credentials' })
     }
@@ -102,6 +103,7 @@ app.post('/auth/login', async (req, res) => {
     return res.status(500).json({ error: 'Internal server error' })
   }
 })
+
 
 // ----------------------------
 //  Protected Test Route
