@@ -5,8 +5,6 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../auth/useAuth";
 
-export const metadata = { title: "Login · Yellow_book" };
-
 export default function LoginPage() {
   const router = useRouter();
   const { login } = useAuth();
@@ -19,6 +17,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError(null);
     setSubmitting(true);
+
     try {
       await login(email, password);
       router.push("/yellow-books");
@@ -32,56 +31,40 @@ export default function LoginPage() {
   return (
     <section className="mx-auto max-w-md py-16">
       <div className="card space-y-6">
-        <div>
-          <h1 className="text-2xl font-semibold text-slate-900">Sign in</h1>
-          <p className="text-sm text-slate-500">
-            Welcome back! Enter your details to continue.
-          </p>
-        </div>
+        <h1 className="text-2xl font-semibold text-slate-900">Sign in</h1>
         <form className="space-y-4 text-left" onSubmit={handleSubmit}>
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-600" htmlFor="email">
-              Email
-            </label>
+          <label className="block text-sm font-medium text-slate-600">
+            Email
             <input
-              id="email"
               type="email"
               required
-              className="input"
+              className="input mt-1"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
+          </label>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-600" htmlFor="password">
-              Password
-            </label>
+          <label className="block text-sm font-medium text-slate-600">
+            Password
             <input
-              id="password"
               type="password"
               required
-              minLength={6}
-              className="input"
+              className="input mt-1"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          </div>
+          </label>
 
           {error && <p className="text-sm text-red-600">{error}</p>}
 
-          <button
-            type="submit"
-            className="btn-primary px-10"
-            disabled={submitting}
-          >
-            {submitting ? "Logging in..." : "Login"}
+          <button className="btn-primary px-10" disabled={submitting}>
+            {submitting ? "Signing in..." : "Sign in"}
           </button>
         </form>
         <p className="text-sm text-slate-500">
-          Need an account?{" "}
+          No account?{" "}
           <Link href="/register" className="text-blue-600">
-            Register
+            Create one
           </Link>
         </p>
       </div>

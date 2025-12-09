@@ -5,8 +5,6 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../auth/useAuth";
 
-export const metadata = { title: "Register · Yellow_book" };
-
 export default function RegisterPage() {
   const router = useRouter();
   const { register } = useAuth();
@@ -92,11 +90,7 @@ export default function RegisterPage() {
 
           {error && <p className="text-sm text-red-600">{error}</p>}
 
-          <button
-            type="submit"
-            className="btn-primary px-10"
-            disabled={submitting}
-          >
+          <button type="submit" className="btn-primary px-10" disabled={submitting}>
             {submitting ? "Registering..." : "Register"}
           </button>
         </form>
