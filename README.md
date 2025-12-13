@@ -54,3 +54,23 @@ npm run dev
 
 [![Docker ECR Deploy](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/actions/workflows/ecr-deploy.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/actions/workflows/ecr-deploy.yml)
 
+## Docker & CI Setup
+
+### 1. Local run
+- docker build -t yellow-api -f apps/api/Dockerfile .
+- docker run -p 4000:4000 yellow-api
+
+### 2. AWS ECR
+- Created private ECR repositories
+- Region: us-east-1
+
+### 3. GitHub Secrets
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- AWS_REGION
+- AWS_ACCOUNT_ID
+
+### 4. CI/CD
+- GitHub Actions builds Docker images
+- Pushes images to Amazon ECR
+- Matrix build for api & web
