@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-push:
@@ -12,7 +12,11 @@ jobs:
 
     strategy:
       matrix:
-        service: [yellow-api, yellow-web]
+        include:
+          - service: yellow-api
+            path: api
+          - service: yellow-web
+            path: web
 
     steps:
       - name: Checkout repo
@@ -28,8 +32,15 @@ jobs:
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Build & Push Docker image
+      - name: Build Docker image
         run: |
           IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ matrix.service }}
-          docker build -t $IMAGE_URI:latest -f apps/${{ matrix.service == 'yellow-api' && 'api' || 'web' }}/Dockerfile .
+          docker build \
+            -t $IMAGE_URI:latest \
+            -f apps/${{ matrix.path }}/Dockerfile \
+            .
+
+      - name: Push Docker image
+        run: |
+          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ matrix.service }}
           docker push $IMAGE_URI:latest
