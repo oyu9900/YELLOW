@@ -9,8 +9,10 @@ async function main() {
   const jsonData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
   for (const item of jsonData) {
-    await prisma.yellowBookEntry.create({
-      data: {
+    await prisma.yellowBookEntry.upsert({
+      where: { email: item.email }, // Unique field
+      update: {}, // Already exists → do nothing for now
+      create: {
         id: item.id,
         fullName: item.fullName,
         title: item.title,
@@ -27,12 +29,8 @@ async function main() {
 }
 
 main()
-  .then(() => {
-    console.log('🌱 Seed completed!')
-  })
-  .catch((e) => {
-    console.error(e)
-  })
+  .then(() => console.log('🌱 Seed completed!'))
+  .catch((e) => console.error(e))
   .finally(async () => {
     await prisma.$disconnect()
   })

@@ -1,27 +1,37 @@
 import { API_URL } from '@yellow-book/config'
 import { YellowBookEntrySchema } from '@yellow-book/contract'
 
-export async function fetchAll() {
-  const res = await fetch(`${API_URL}/yellow-books`, {
-    next: { revalidate: 60 }
-  })
+// 🔑 BUILD vs RUNTIME ялгах
+const isBuildTime =
+  process.env.NODE_ENV === 'production' &&
+  process.env.NEXT_PUBLIC_IS_RUNTIME !== 'true'
 
-  if (!res.ok) {
-    console.error("❌ /yellow-books failed:", await res.text())
+export async function fetchAll() {
+  if (isBuildTime) {
+    console.warn('⚠️ BUILD TIME: skip fetchAll')
     return []
   }
 
-  const json = await res.json()
-  return YellowBookEntrySchema.array().parse(json)
+  const res = await fetch(`${API_URL}/yellow-books`, {
+    next: { revalidate: 5 },
+  })
+
+  if (!res.ok) {
+    console.error('❌ fetchAll failed')
+    return []
+  }
+
+  return YellowBookEntrySchema.array().parse(await res.json())
 }
 
 export async function fetchOne(id: string) {
-  const res = await fetch(`${API_URL}/yellow-books/${id}`)
-
-  if (!res.ok) {
-    console.error(`❌ /yellow-books/${id} failed`, await res.text())
+  if (isBuildTime) {
+    console.warn(`⚠️ BUILD TIME: skip fetchOne(${id})`)
     return null
   }
+
+  const res = await fetch(`${API_URL}/yellow-books/${id}`)
+  if (!res.ok) return null
 
   return YellowBookEntrySchema.parse(await res.json())
 }

@@ -226,6 +226,19 @@ app.post('/yellow-books', auth, async (req, res) => {
   }
 })
 
+app.post('/debug/add', async (_req, res) => {
+  const item = await prisma.yellowBookEntry.create({
+    data: {
+      fullName: 'ISR TEST ' + Date.now(),
+      title: 'Demo org',
+      email: `demo${Date.now()}@test.com`,
+      city: 'Ulaanbaatar',
+      department: 'Test',
+    },
+  })
+  res.json(item)
+})
+
 // ----------------------------
 // Start Server
 // ----------------------------

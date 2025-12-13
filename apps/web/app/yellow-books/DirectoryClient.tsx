@@ -5,13 +5,16 @@ import Link from 'next/link'
 import type { YellowBookEntry } from '@yellow-book/contract'
 import { Mail, Phone, Building2 } from 'lucide-react'
 
+
+
 type Props = {
   entries: YellowBookEntry[]
 }
 
 const defaultOption = 'All'
 
-export default function DirectoryClient({ entries }: Props) {
+export default function DirectoryClient({ entries = [] }: Props) {
+
   const [query, setQuery] = useState('')
   const [city, setCity] = useState(defaultOption)
   const [category, setCategory] = useState(defaultOption)

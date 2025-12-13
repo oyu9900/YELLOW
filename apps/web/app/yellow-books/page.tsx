@@ -3,18 +3,21 @@ import { fetchAll } from "./fetchers"
 import DirectoryClient from "./DirectoryClient"
 import { API_URL } from "@yellow-book/config"
 
-export const revalidate = 60   // ✔ ISR every 60 sec
+export const revalidate = 5   // ✔ ISR every 60 sec
+export const dynamic = 'force-dynamic'
+
 
 export default async function Page() {
   const entries = await fetchAll()
 
   return (
     <div className="space-y-10">
+      {/* MAIN CONTENT */}
       <DirectoryClient entries={entries} />
 
-      {/* 🎉 Streamed section */}
+      {/* STREAMED / OPTIONAL SECTION */}
       <Suspense fallback={<HighlightsSkeleton />}>
-        <Highlights />
+      <Highlights />
       </Suspense>
     </div>
   )

@@ -1,22 +1,19 @@
-# Simple Dockerfile for the API service
-FROM node:20-alpine
+FROM node:20-bookworm-slim
 
 WORKDIR /app
 
-# Install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy source code and prisma assets
 COPY . .
 
-# Prisma client (uses sqlite dev.db by default)
+
+
+# Install OpenSSL 1.1
+RUN apt-get update && apt-get install -y openssl && \
+    ln -s /usr/lib/x86_64-linux-gnu/libssl.so.1.1 /usr/lib/x86_64-linux-gnu/libssl.so.1.1 || true
+
 RUN npx prisma generate
 
-ENV NODE_ENV=production
-ENV PORT=4000
-ENV DATABASE_URL=file:./prisma/dev.db
-
 EXPOSE 4000
-
 CMD ["npm", "run", "dev:api"]
