@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Prisma-SQLite-blue?style=for-the-badge" />
 </p>
 
-# Yellow Book NX (Лаб , бүрэн гүйцэт)
+# Yellow Book NX (Лаб , бүрэн гүйцэт)q1
 
 Бүрэн хийгдсэн лабораторийн даалгаврын төсөл:
 - Nx workspace (`apps/web`, `apps/api`, `libs/contract`, `libs/config`)
