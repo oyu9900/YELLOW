@@ -2,45 +2,34 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        service: [yellow-api, yellow-web]
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-      # Install dependencies
-      - name: Install dependencies
-        run: npm ci
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v2
 
-      # Prisma Generate
-      - name: Prisma Generate
-        run: npx prisma generate
-
-      # Create .env for CI
-      - name: Create env
+      - name: Build & Push Docker image
         run: |
-          echo "DATABASE_URL=file:./prisma/dev.db" > .env
-          echo "JWT_SECRET=test-ci-secret" >> .env
-          echo "API_URL=http://localhost:4000" >> .env
-
-      # Lint
-      - name: Lint
-        run: npm run lint
-
-      # Typecheck
-      - name: Typecheck
-        run: npm run typecheck
-
-      # Build
-      - name: Build
-        run: npm run build
+          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ matrix.service }}
+          docker build -t $IMAGE_URI:latest -f apps/${{ matrix.service == 'yellow-api' && 'api' || 'web' }}/Dockerfile .
+          docker push $IMAGE_URI:latest
