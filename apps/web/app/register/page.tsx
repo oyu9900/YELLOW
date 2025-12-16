@@ -8,6 +8,7 @@ import { useAuth } from "../auth/useAuth";
 export default function RegisterPage() {
   const router = useRouter();
   const { register } = useAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
@@ -35,69 +36,130 @@ export default function RegisterPage() {
   }
 
   return (
-    <section className="mx-auto max-w-md py-16">
-      <div className="card space-y-6">
-        <div>
-          <h1 className="text-2xl font-semibold text-slate-900">Create account</h1>
-          <p className="text-sm text-slate-500">
-            Register your organization to appear in the directory.
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 px-4">
+      <div
+        className="
+          w-full max-w-md
+          rounded-2xl
+          bg-white/10
+          backdrop-blur-xl
+          border border-white/20
+          shadow-2xl
+          p-8
+          space-y-6
+        "
+      >
+        {/* HEADER */}
+        <div className="text-center space-y-1">
+          <h1 className="text-3xl font-bold text-white">Create account</h1>
+          <p className="text-sm text-white/70">
+            Join Yellow Book and list your organization
           </p>
         </div>
-        <form className="space-y-4 text-left" onSubmit={handleSubmit}>
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-600" htmlFor="email">
+
+        {/* FORM */}
+        <form className="space-y-4" onSubmit={handleSubmit}>
+          <div>
+            <label className="block text-sm font-medium text-white/80">
               Email
             </label>
             <input
-              id="email"
               type="email"
               required
-              className="input"
+              placeholder="you@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="
+                mt-1 w-full rounded-lg
+                bg-white/20
+                border border-white/30
+                px-4 py-2
+                text-white
+                placeholder:text-white/60
+                focus:outline-none
+                focus:ring-2 focus:ring-blue-400
+              "
             />
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-600" htmlFor="password">
+          <div>
+            <label className="block text-sm font-medium text-white/80">
               Password
             </label>
             <input
-              id="password"
               type="password"
               required
               minLength={6}
-              className="input"
+              placeholder="Minimum 6 characters"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className="
+                mt-1 w-full rounded-lg
+                bg-white/20
+                border border-white/30
+                px-4 py-2
+                text-white
+                placeholder:text-white/60
+                focus:outline-none
+                focus:ring-2 focus:ring-blue-400
+              "
             />
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-600" htmlFor="confirm">
+          <div>
+            <label className="block text-sm font-medium text-white/80">
               Confirm password
             </label>
             <input
-              id="confirm"
               type="password"
               required
               minLength={6}
-              className="input"
+              placeholder="Repeat password"
               value={confirm}
               onChange={(e) => setConfirm(e.target.value)}
+              className="
+                mt-1 w-full rounded-lg
+                bg-white/20
+                border border-white/30
+                px-4 py-2
+                text-white
+                placeholder:text-white/60
+                focus:outline-none
+                focus:ring-2 focus:ring-blue-400
+              "
             />
           </div>
 
-          {error && <p className="text-sm text-red-600">{error}</p>}
+          {error && (
+            <p className="text-sm text-red-400 bg-red-500/10 border border-red-500/30 rounded-md px-3 py-2">
+              {error}
+            </p>
+          )}
 
-          <button type="submit" className="btn-primary px-10" disabled={submitting}>
+          <button
+            type="submit"
+            disabled={submitting}
+            className="
+              w-full mt-2
+              rounded-lg
+              bg-blue-600 hover:bg-blue-700
+              transition
+              py-2.5
+              font-semibold
+              text-white
+              shadow-lg
+              disabled:opacity-60
+            "
+          >
             {submitting ? "Registering..." : "Register"}
           </button>
         </form>
-        <p className="text-sm text-slate-500">
+
+        {/* FOOTER */}
+        <p className="text-sm text-center text-white/70">
           Already registered?{" "}
-          <Link href="/login" className="text-blue-600">
-            Login
+          <Link href="/login" className="text-blue-400 hover:underline">
+            Sign in
           </Link>
         </p>
       </div>

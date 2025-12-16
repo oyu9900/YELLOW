@@ -43,7 +43,7 @@ export function useAuth() {
     if (!res.ok) {
       throw new Error((data && data.error) || "Failed to login");
     }
-
+    await login(email, password);
     const auth = data as AuthResponse;
 
     if (typeof window !== "undefined") {

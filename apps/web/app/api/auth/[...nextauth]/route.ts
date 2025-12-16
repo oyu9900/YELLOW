@@ -15,6 +15,9 @@ const handler = NextAuth({
   session: {
     strategy: "jwt",
   },
+  pages: {
+    signIn: "/login",
+  },
 
   callbacks: {
     // 🔐 JWT-д role ачаална
