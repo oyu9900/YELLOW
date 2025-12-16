@@ -1,13 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": "../../",
-    "paths": {
-      "@yellow-book/contract": ["libs/contract/src/index.ts"],
-      "@yellow-book/config": ["libs/config/src/index.ts"]
-    },
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext"
+    "module": "CommonJS",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "outDir": "../../dist/apps/api",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["**/*.tsx"]
 }
