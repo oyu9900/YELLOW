@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { fetchAll, fetchOne } from '../fetchers'
 import { Mail, Phone, Building2, MapPin } from 'lucide-react'
 
@@ -9,8 +10,18 @@ export async function generateStaticParams() {
   return list.map((e) => ({ id: e.id }))
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({
+    params,
+}: {
+  params: { id: string }
+}) {
   const e = await fetchOne(params.id)
+
+  // ⛔ хамгаалалт
+  if (!e) {
+    notFound()
+  }
+
   return (
     <div className="space-y-6">
       <Link href="/yellow-books" className="text-sm font-medium text-blue-600">

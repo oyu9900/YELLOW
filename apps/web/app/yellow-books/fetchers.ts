@@ -1,5 +1,8 @@
-import { API_URL } from '@yellow-book/config'
+
 import { YellowBookEntrySchema } from '@yellow-book/contract'
+
+const API_URL =
+  process.env.API_URL || "http://localhost:4000";
 
 // 🔑 BUILD vs RUNTIME ялгах
 const isBuildTime =
