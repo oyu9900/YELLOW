@@ -1,24 +1,35 @@
 "use client";
 
 import Link from "next/link";
-import { useAuth } from "../app/auth/useAuth";
+import { signOut, useSession } from "next-auth/react";
 
 export default function ClientHeader() {
-  const { user, logout } = useAuth();
+  const { data: session, status } = useSession();
+
+  if (status === "loading") {
+    return <div className="text-slate-400 text-sm">Loading...</div>;
+  }
+
+  const user = session?.user;
 
   return (
-    <nav className="flex items-center gap-6 text-sm font-medium text-slate-200">
+    <nav className="flex items-center gap-6 text-sm font-medium text-slate-300">
       <Link href="/yellow-books" className="hover:text-white">
         Organizations
       </Link>
 
       {user ? (
         <>
-          <span className="text-slate-300">{user.email}</span>
+          <Link
+            href="/profile"
+            className="rounded-lg bg-white/10 px-3 py-1 hover:bg-white/20"
+          >
+            {user.email}
+          </Link>
 
           <button
-            onClick={logout}
-            className="px-4 py-1 bg-white/10 hover:bg-white/20 rounded-lg text-white"
+            onClick={() => signOut({ callbackUrl: "/" })}
+            className="rounded-lg bg-red-500/20 px-3 py-1 text-red-300 hover:bg-red-500/30"
           >
             Logout
           </button>
@@ -28,7 +39,10 @@ export default function ClientHeader() {
           <Link href="/login" className="hover:text-white">
             Login
           </Link>
-          <Link href="/register" className="hover:text-white">
+          <Link
+            href="/register"
+            className="rounded-lg bg-blue-500/20 px-3 py-1 hover:bg-blue-500/30"
+          >
             Register
           </Link>
         </>
@@ -36,4 +50,3 @@ export default function ClientHeader() {
     </nav>
   );
 }
-

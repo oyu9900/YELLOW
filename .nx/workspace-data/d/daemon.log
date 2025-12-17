@@ -4455,3 +4455,326 @@ Time for 'build typescript dependencies' 0.028125000069849193
 [NX v22.1.3 Daemon Server] - 2025-12-16T03:08:37.161Z - [WATCHER]: Stopping the watcher for /Users/oyuntulhuur/Downloads/Yellow_Book-main (outputs)
 [NX v22.1.3 Daemon Server] - 2025-12-16T03:08:37.165Z - [NX-CONSOLE]: Cleaning up latest Nx installation from /private/var/folders/h1/gmfr7shn6r315fpvrtq5w2lh0000gn/T/tmp-48587-aHKSZ17TmmGs
 [NX v22.1.3 Daemon Server] - 2025-12-16T03:08:37.172Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:35.994Z - Started listening on: /private/var/folders/h1/gmfr7shn6r315fpvrtq5w2lh0000gn/T/db5bc6304272189bda17/d.sock
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:35.997Z - [WATCHER]: Subscribed to changes within: /Users/oyuntulhuur/Downloads/Yellow_Book-main (native)
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:35.997Z - [NX-CONSOLE]: Pulling latest Nx (latest) to check console status...
+Fetching nx...
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.087Z - Established a connection. Number of open connections: 1
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.087Z - Established a connection. Number of open connections: 2
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.088Z - Closed a connection. Number of open connections: 1
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.089Z - Received raw message of length 32
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.089Z - Received json message of type GET_NX_CONSOLE_STATUS
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.089Z - Serializing response for GET_NX_CONSOLE_STATUS message in json mode
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.090Z - Responding to GET_NX_CONSOLE_STATUS message
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.090Z - [REQUEST]: Responding to the client. handleGetNxConsoleStatus
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.090Z - Done responding to the client handleGetNxConsoleStatus
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.090Z - Handled json message GET_NX_CONSOLE_STATUS. Handling time: 0. Response time: 1.
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.104Z - Time taken for 'loadSpecifiedNxPlugins' 2.233165999999983ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.105Z - Received raw message of length 32
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.105Z - Received json message of type REQUEST_PROJECT_GRAPH
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.105Z - [REQUEST]: Client Request for Project Graph Received
+Time for 'plugin worker 5936 code loading' 2.590250000000001
+Time for 'plugin worker 5935 code loading' 2.953292000000001
+Time for 'plugin worker 5934 code loading' 4.0170829999999995
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.215Z - Time taken for 'Load Nx Plugin: /Users/oyuntulhuur/Downloads/Yellow_Book-main/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 115.27937499999999ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.216Z - Time taken for 'Load Nx Plugin: /Users/oyuntulhuur/Downloads/Yellow_Book-main/node_modules/nx/src/plugins/package-json' 116.30612500000001ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.243Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.243Z - [REQUEST]: 
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.243Z - [REQUEST]: 
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.244Z - Reusing in-memory cached project graph because no files changed.
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 0.0966669999999965
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.247Z - Time taken for 'loadDefaultNxPlugins' 144.89120900000003ms
+Time for 'nx/core/package-json:createNodes' 0.44729200000000446
+Time for 'nx/core/project-json:createNodes' 0.40979099999998425
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.261Z - Time taken for 'build-project-configs' 5.377875000000017ms
+Time for 'build typescript dependencies' 0.06387499999999591
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.262Z - [SYNC]: collect registered sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.264Z - Wrote project graph cache to /Users/oyuntulhuur/Downloads/Yellow_Book-main/.nx/workspace-data/project-graph.json
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.264Z - Serializing response for REQUEST_PROJECT_GRAPH message in json mode
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.264Z - Responding to REQUEST_PROJECT_GRAPH message
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.264Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.264Z - Done responding to the client project-graph
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.264Z - Handled json message REQUEST_PROJECT_GRAPH. Handling time: 159. Response time: 0.
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.264Z - Time taken for 'total for creating and serializing project graph' 158.328875ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:36.294Z - Closed a connection. Number of open connections: 0
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:49.016Z - [NX-CONSOLE]: Successfully pulled latest Nx to /private/var/folders/h1/gmfr7shn6r315fpvrtq5w2lh0000gn/T/tmp-5929-wvAil4U1jXZG
+[NX v22.2.5 Daemon Server] - 2025-12-16T07:46:49.137Z - [NX-CONSOLE]: Using local implementation (NX_USE_LOCAL=true or inner call)
+DEBUG nx::native::ide::install: Detected editor: VSCode
+DEBUG nx::native::ide::install: Checking if Nx Console extension is installed with: code --list-extensions
+DEBUG nx::native::ide::install: Nx Console extension is not installed
+[NX v22.1.3 Daemon Server] - 2025-12-16T07:46:49.614Z - [NX-CONSOLE]: Console status check completed, shouldPrompt: false
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:08:12.427Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:48.885Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:49.402Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:49.658Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:49.741Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:50.781Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:51.795Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:52.737Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:53.305Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:53.409Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:54.138Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:54.302Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:54.529Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:54.590Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:54.678Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:58.368Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:29:58.771Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:30:05.248Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:30:05.362Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:30:06.426Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:31:07.107Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:31:07.220Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:31:07.329Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:31:07.403Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:31:07.579Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:02.953Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:03.933Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:11.939Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:12.489Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:31.966Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:32.227Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:32.472Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:32.541Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:37.063Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:37.333Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:38.132Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:38.203Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:38.427Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:38.646Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:40.199Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:47:40.303Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:48:40.339Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:48:40.427Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:56:02.886Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:56:03.163Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:56:05.201Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:56:05.808Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:57:05.311Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:57:05.390Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:57:13.862Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:57:14.978Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T08:57:15.131Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:10:43.065Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:10:43.447Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:10:43.544Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:11:22.968Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:11:24.758Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:11:29.934Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:12:30.062Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:12:30.149Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:12:30.214Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:14.906Z - [WATCHER]: apps/web/app/api/auth/[...nextauth]/route.ts was modified
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:14.909Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.014Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.014Z - [REQUEST]: apps/web/app/api/auth/[...nextauth]/route.ts
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.014Z - [REQUEST]: 
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.024Z - Time taken for 'hash changed files from watcher' 2.0446250000968575ms
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 4.540665999986231
+Time for 'nx/core/project-json:createNodes' 6.592333000153303
+Time for 'nx/core/package-json:createNodes' 7.213250000029802
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.055Z - Time taken for 'build-project-configs' 28.91358399949968ms
+Time for 'build typescript dependencies' 0.10537500027567148
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.059Z - [SYNC]: collect registered sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.059Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.059Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.059Z - Time taken for 'total execution time for createProjectGraph()' 8.617209000512958ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.564Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:15.634Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:16.674Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:16.737Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:31.404Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:32.088Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:44.474Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:44.747Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:45.003Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:45.063Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:51.151Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:51.392Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:52.254Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:52.308Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:52.368Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:52.420Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:55.904Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:55.976Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:57.015Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:57.390Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:58.504Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:58.577Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:13:58.650Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:15:52.309Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:15:52.916Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:01.625Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:01.872Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:02.112Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:02.169Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:03.780Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:03.996Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:04.866Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:04.928Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:04.983Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:05.037Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:06.597Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:06.669Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:07.709Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:16:08.288Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:17:08.384Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:17:08.472Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:25:55.090Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:25:55.415Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:25:55.479Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:15.384Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:16.895Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:39.865Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:40.149Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:40.386Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:40.450Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:41.853Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:42.151Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:42.933Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:43.002Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:43.066Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:43.185Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:44.074Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:44.161Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:45.213Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:45.274Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:26:45.652Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:18.422Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:18.999Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:33.321Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:33.577Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:33.814Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:33.871Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:37.169Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:37.574Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:38.652Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:39.352Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:39.435Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:40.443Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:40.536Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:27:40.765Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:28:39.475Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:28:40.811Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:28:40.906Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:35:55.635Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:35:55.953Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:36:44.428Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:36:44.723Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:06.494Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:15.280Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:25.729Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:25.783Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:25.873Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:30.472Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:31.584Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:31.637Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:39.393Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:53.849Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:37:53.901Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:38:14.707Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:38:53.925Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:38:53.976Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:38:54.030Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:42:58.557Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:42:59.184Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:42:59.586Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.499Z - [WATCHER]: apps/web/app/profile/page.tsx was created or restored
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.501Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.655Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.655Z - [REQUEST]: apps/web/app/profile/page.tsx
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.655Z - [REQUEST]: 
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.688Z - Time taken for 'hash changed files from watcher' 2.519582999870181ms
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 8.554459000006318
+Time for 'nx/core/project-json:createNodes' 12.880750000476837
+Time for 'nx/core/package-json:createNodes' 12.750167000107467
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.725Z - Time taken for 'build-project-configs' 42.121624999679625ms
+Time for 'build typescript dependencies' 0.014875000342726707
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.730Z - [SYNC]: collect registered sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.730Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.730Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.730Z - Time taken for 'total execution time for createProjectGraph()' 6.552958000451326ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.840Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:09.959Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:10.042Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:10.275Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:11.121Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:11.194Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:16.867Z - [WATCHER]: apps/web/app/profile/page.tsx was modified
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:16.868Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.035Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.068Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.068Z - [REQUEST]: apps/web/app/profile/page.tsx
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.068Z - [REQUEST]: 
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.070Z - Time taken for 'hash changed files from watcher' 0.1318749999627471ms
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 0.23362499941140413
+Time for 'nx/core/project-json:createNodes' 0.7589170001447201
+Time for 'nx/core/package-json:createNodes' 1.2049169996753335
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.074Z - Time taken for 'build-project-configs' 3.046707999892533ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.078Z - [SYNC]: collect registered sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.079Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.079Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.079Z - Time taken for 'total execution time for createProjectGraph()' 5.788584000431001ms
+Time for 'build typescript dependencies' 0.012833000160753727
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:17.439Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:34.648Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:45.682Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:43:53.665Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:44:17.114Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:44:45.790Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:44:45.892Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:47:30.162Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:47:30.919Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:47:55.376Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:47:55.705Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:47:55.958Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:47:56.014Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:47:56.082Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:06.873Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:07.216Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:08.015Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:08.079Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:08.182Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:08.259Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:10.463Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:10.593Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:11.636Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:11.700Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:11.828Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:21.732Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:25.629Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:25.728Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:48:25.836Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:49:25.780Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:49:25.920Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:50:27.841Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:50:27.925Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:50:28.244Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:50:28.536Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:50:31.360Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:50:33.755Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:50:33.811Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:51:33.901Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:51:34.011Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:54:14.185Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:32.982Z - [WATCHER]: package.json was modified
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:32.983Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.073Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.387Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.387Z - [REQUEST]: package.json
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.387Z - [REQUEST]: 
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.394Z - Time taken for 'hash changed files from watcher' 2.062749999575317ms
+Time for 'nx/core/project-json:createNodes' 0.6065409993752837
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 0.3962079994380474
+Time for 'nx/core/package-json:createNodes' 2.1610000003129244
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.400Z - Time taken for 'build-project-configs' 5.14166700001806ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.401Z - [SYNC]: collect registered sync generators
+Time for 'build typescript dependencies' 0.010291000828146935
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.402Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.402Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:33.402Z - Time taken for 'total execution time for createProjectGraph()' 2.7079159999266267ms
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:39.706Z - [WATCHER]: Processing file changes in outputs
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:39.706Z - [WATCHER]: Stopping the watcher for /Users/oyuntulhuur/Downloads/Yellow_Book-main (sources)
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:39.706Z - [WATCHER]: Stopping the watcher for /Users/oyuntulhuur/Downloads/Yellow_Book-main (outputs)
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:39.710Z - [NX-CONSOLE]: Cleaning up latest Nx installation from /private/var/folders/h1/gmfr7shn6r315fpvrtq5w2lh0000gn/T/tmp-5929-wvAil4U1jXZG
+[NX v22.1.3 Daemon Server] - 2025-12-16T09:55:39.713Z - Server stopped because: "LOCK_FILES_CHANGED"

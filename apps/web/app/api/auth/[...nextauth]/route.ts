@@ -1,10 +1,13 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const handler = NextAuth({
+export const authOptions: NextAuthOptions = {
+  adapter: PrismaAdapter(prisma),
+
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID!,
@@ -15,12 +18,12 @@ const handler = NextAuth({
   session: {
     strategy: "jwt",
   },
+
   pages: {
     signIn: "/login",
   },
 
   callbacks: {
-    // 🔐 JWT-д role ачаална
     async jwt({ token }) {
       if (token.email) {
         const user = await prisma.user.findUnique({
@@ -28,12 +31,11 @@ const handler = NextAuth({
           select: { role: true },
         });
 
-        token.role = user?.role ?? "user";
+        token.role = user?.role ?? "USER";
       }
       return token;
     },
 
-    // 🧠 Session-д role дамжуулна
     async session({ session, token }) {
       if (session.user) {
         (session.user as any).role = token.role;
@@ -41,6 +43,8 @@ const handler = NextAuth({
       return session;
     },
   },
-});
+};
+
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };

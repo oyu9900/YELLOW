@@ -1,20 +1,36 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
-const USER_KEY = "yb-user";
+export default function Protected({
+  children,
+  role,
+}: {
+  children: React.ReactNode;
+  role?: "USER" | "ADMIN";
+}) {
+  const { data: session, status } = useSession();
 
-export default function Protected({ children }: { children: ReactNode }) {
-  const router = useRouter();
+  // ⏳ Session ачаалж байхад юу ч битгий хий
+  if (status === "loading") {
+    return (
+      <div className="flex h-[60vh] items-center justify-center text-slate-300">
+        Loading profile...
+      </div>
+    );
+  }
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const user = window.localStorage.getItem(USER_KEY);
-    if (!user) {
-      router.push("/login");
-    }
-  }, [router]);
+  // ❌ Login хийгээгүй бол
+  if (!session) {
+    redirect("/login");
+  }
+
+  // 👑 Role шалгалт (ADMIN only)
+  if (role && (session.user as any)?.role !== role) {
+    redirect("/profile");
+  }
 
   return <>{children}</>;
 }
+

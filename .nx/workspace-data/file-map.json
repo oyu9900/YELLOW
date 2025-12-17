@@ -46,27 +46,11 @@
       },
       {
         "file": "apps/api/Dockerfile",
-        "hash": "11942957311948927023"
+        "hash": "101417761169632516"
       },
       {
         "file": "apps/api/prisma/seed.js",
         "hash": "12980971185882125449"
-      },
-      {
-        "file": "apps/api/src/admin/admin.controller.ts",
-        "hash": "9634934764586346273"
-      },
-      {
-        "file": "apps/api/src/admin/page.tsx",
-        "hash": "7975371587692773689"
-      },
-      {
-        "file": "apps/api/src/auth/jwt-auth.guard.ts",
-        "hash": "8033592678217409306"
-      },
-      {
-        "file": "apps/api/src/auth/roles.guard.ts",
-        "hash": "14379027534983517112"
       },
       {
         "file": "apps/api/src/data/seed.json",
@@ -74,11 +58,11 @@
       },
       {
         "file": "apps/api/src/index.ts",
-        "hash": "14942179087469421136"
+        "hash": "7878958737488082745"
       },
       {
         "file": "apps/api/src/yellow-books/yellow-books.controller.ts",
-        "hash": "14317116097252957248"
+        "hash": "3481981508656480775"
       },
       {
         "file": "apps/api/src/yellow-books/yellow-books.service.ts ",
@@ -86,23 +70,27 @@
       },
       {
         "file": "apps/api/tsconfig.json",
-        "hash": "10479297383481780802"
+        "hash": "8624187490044950638"
       },
       {
         "file": "apps/web/Dockerfile",
         "hash": "15280685426105131933"
       },
       {
-        "file": "apps/web/admin/page.tsx",
-        "hash": "606776837803669242"
+        "file": "apps/web/admin/admin.controller.ts",
+        "hash": "9634934764586346273"
       },
       {
-        "file": "apps/web/app/api/revalidate/route.ts",
-        "hash": "9136428904837919541"
+        "file": "apps/web/admin/page.tsx",
+        "hash": "7975371587692773689"
+      },
+      {
+        "file": "apps/web/app/api/auth/[...nextauth]/route.ts",
+        "hash": "14741698232041367954"
       },
       {
         "file": "apps/web/app/auth/useAuth.ts",
-        "hash": "4374960772499242208"
+        "hash": "1303165713146151704"
       },
       {
         "file": "apps/web/app/globals.css",
@@ -118,7 +106,7 @@
       },
       {
         "file": "apps/web/app/login/page.tsx",
-        "hash": "18187473294824309372"
+        "hash": "5853289001042731503"
       },
       {
         "file": "apps/web/app/page.tsx",
@@ -130,7 +118,7 @@
       },
       {
         "file": "apps/web/app/register/page.tsx",
-        "hash": "5410192577384360414"
+        "hash": "6304138083867147488"
       },
       {
         "file": "apps/web/app/yellow-books/DirectoryClient.tsx",
@@ -138,15 +126,15 @@
       },
       {
         "file": "apps/web/app/yellow-books/[id]/page.tsx",
-        "hash": "15928381946664299152"
+        "hash": "2489057151839217634"
       },
       {
         "file": "apps/web/app/yellow-books/fetchers.ts",
-        "hash": "8281565400881086468"
+        "hash": "13425760636998128193"
       },
       {
         "file": "apps/web/app/yellow-books/page.tsx",
-        "hash": "17102834926867676161"
+        "hash": "1445790800316468209"
       },
       {
         "file": "apps/web/app/yellow-books/search/MapIsland.tsx",
@@ -181,6 +169,10 @@
         "hash": "7069339284799151997"
       },
       {
+        "file": "eksctl.tar.gz",
+        "hash": "17338431722851400051"
+      },
+      {
         "file": "libs/config/src/index.ts",
         "hash": "12054882569047921418"
       },
@@ -190,7 +182,7 @@
       },
       {
         "file": "package.json",
-        "hash": "17764461553396993600"
+        "hash": "11572255235717890197"
       },
       {
         "file": "perf.md",
@@ -201,6 +193,10 @@
         "hash": "8055263870272897227"
       },
       {
+        "file": "prisma/dev.db",
+        "hash": "3244421341483603138"
+      },
+      {
         "file": "prisma/migrations/20251117134104_init/migration.sql",
         "hash": "15596418863150764980"
       },
@@ -209,16 +205,20 @@
         "hash": "11686595152775587592"
       },
       {
+        "file": "prisma/migrations/20251216063857_add_role_and_email_verified/migration.sql",
+        "hash": "966315168247708548"
+      },
+      {
         "file": "prisma/migrations/migration_lock.toml",
         "hash": "10997593172930738585"
       },
       {
         "file": "prisma/prisma/dev.db",
-        "hash": "17906471115227610774"
+        "hash": "8633699061436061626"
       },
       {
         "file": "prisma/schema.prisma",
-        "hash": "1066005955703574755"
+        "hash": "8077455441803832130"
       },
       {
         "file": "tailwind.config.ts",
