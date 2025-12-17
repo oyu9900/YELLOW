@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: yellowbooks-migrate
+  namespace: yellowbooks
+spec:
+  backoffLimit: 1
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: migrate
+          image: <API_IMAGE>
+          imagePullPolicy: Always
+          command:
+            - sh
+            - -c
+            - |
+              echo "Running Prisma migrations..."
+              npx prisma migrate deploy
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: yellowbooks-secrets
+                  key: DATABASE_URL

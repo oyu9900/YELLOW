@@ -10,7 +10,7 @@ export default function ClientHeader() {
     return <div className="text-slate-400 text-sm">Loading...</div>;
   }
 
-  const user = session?.user;
+  const user = session?.user as any;
 
   return (
     <nav className="flex items-center gap-6 text-sm font-medium text-slate-300">
@@ -20,6 +20,14 @@ export default function ClientHeader() {
 
       {user ? (
         <>
+          {/* 👑 ADMIN MENU */}
+          {user?.role === "ADMIN" && (
+  <Link href="/admin" className="hover:text-yellow-400">
+    Admin
+  </Link>
+)}
+
+
           <Link
             href="/profile"
             className="rounded-lg bg-white/10 px-3 py-1 hover:bg-white/20"

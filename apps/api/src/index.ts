@@ -6,13 +6,15 @@ import bcrypt from 'bcryptjs'
 import cookieParser from 'cookie-parser'
 import fs from 'fs'
 import path from 'path'
+import adminRoutes from "./admin/admin.controller";
+
 
 const app = express()
 const prisma = new PrismaClient()
 
 app.use(express.json())
 app.use(cookieParser())
-
+app.use("/admin", adminRoutes);
 const useDb = process.env.USE_DB !== 'false'
 
 // ----------------------------

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yellowbooks-api
+  namespace: yellowbooks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yellowbooks-api
+  template:
+    metadata:
+      labels:
+        app: yellowbooks-api
+    spec:
+      containers:
+        - name: api
+          image: <ECR_API_IMAGE>
+          ports:
+            - containerPort: 4000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: yellowbooks-secret
+                  key: DATABASE_URL

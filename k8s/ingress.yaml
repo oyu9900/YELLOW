@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: yellowbooks-ingress
+  namespace: yellowbooks
+spec:
+  rules:
+    - host: yellowbooks.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: yellowbooks-web
+                port:
+                  number: 80
