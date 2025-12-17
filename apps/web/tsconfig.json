@@ -22,10 +22,21 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "../../tailwind.config.ts"  ],
+
+    "app/**/*.ts",
+    "app/**/*.tsx",
+
+    "components/**/*.ts",
+    "components/**/*.tsx",
+
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+
+    "../../tailwind.config.ts"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "../../apps/api",
+    "../../apps/api/**/*"
   ]
 }
