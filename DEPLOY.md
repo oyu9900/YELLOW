@@ -1,4 +1,4 @@
-# 🚀 YellowBooks Deployment Guide (EKS)
+# YellowBooks Deployment Guide (EKS)
 
 This document describes how the YellowBooks web application is deployed on AWS EKS
 with OIDC authentication, Ingress + TLS, CI/CD, database migration, and autoscaling.

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { API_URL } from "@yellow-book/config";
+import { API_URL } from "@/lib/config";
 
 type User = {
   email: string;

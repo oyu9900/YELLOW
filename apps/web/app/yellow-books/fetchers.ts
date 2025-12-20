@@ -1,5 +1,6 @@
 
-import { YellowBookEntrySchema } from '@yellow-book/contract'
+import { YellowBookEntrySchema } from "@/lib/contracts/yellowBook";
+
 
 const API_URL =
   process.env.API_URL || "http://localhost:4000";

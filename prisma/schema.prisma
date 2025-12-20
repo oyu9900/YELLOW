@@ -18,7 +18,12 @@ model YellowBookEntry {
   lat        Float?
   lng        Float?
   avatarUrl  String?
+
+  // ✅ SQLite compatible embedding
+  embedding  String?
 }
+
+
 
 model User {
   id            String    @id @default(cuid())
